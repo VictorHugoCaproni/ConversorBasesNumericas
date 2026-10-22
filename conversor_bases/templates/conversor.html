@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="text-center my-4">
+    <h2>Painel de Conversão de Bases Numéricas</h2>
+    <p class="text-muted">Selecione a base de origem na caixa correspondente para converter para as demais bases.</p>
+</div>
+
+<div class="row g-4 justify-content-center">
+    
+    <!-- Caixa Decimal -->
+    <div class="col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm border-0 card-box border-coral">
+            <div class="card-header text-white font-weight-bold header-coral">Decimal</div>
+            <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                    <label class="form-label">Digite o valor em Decimal:</label>
+                    <input type="text" id="input-10" class="form-control mb-3" placeholder="Ex: 255">
+                </div>
+                <button class="btn btn-coral w-100" onclick="solicitarConversao(10, 'input-10', 'Decimal')">Converter</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Caixa Binário -->
+    <div class="col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm border-0 card-box border-yellow">
+            <div class="card-header text-dark font-weight-bold header-yellow">Binário</div>
+            <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                    <label class="form-label">Digite o valor em Binário:</label>
+                    <input type="text" id="input-2" class="form-control mb-3" placeholder="Ex: 11111111">
+                </div>
+                <button class="btn btn-yellow w-100" onclick="solicitarConversao(2, 'input-2', 'Binário')">Converter</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Caixa Hexadecimal -->
+    <div class="col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm border-0 card-box border-green">
+            <div class="card-header text-white font-weight-bold header-green">Hexadecimal</div>
+            <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                    <label class="form-label">Digite o valor em Hexa:</label>
+                    <input type="text" id="input-16" class="form-control mb-3" placeholder="Ex: FF">
+                </div>
+                <button class="btn btn-green w-100" onclick="solicitarConversao(16, 'input-16', 'Hexadecimal')">Converter</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Caixa Octal -->
+    <div class="col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm border-0 card-box border-purple">
+            <div class="card-header text-white font-weight-bold header-purple">Octal</div>
+            <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                    <label class="form-label">Digite o valor em Octal:</label>
+                    <input type="text" id="input-8" class="form-control mb-3" placeholder="Ex: 377">
+                </div>
+                <button class="btn btn-purple w-100" onclick="solicitarConversao(8, 'input-8', 'Octal')">Converter</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Modal Bootstrap para Resultado -->
+<div class="modal fade" id="modalResultado" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-light">
+                <h5 class="modal-title" id="modalTitulo">Resultado da Conversão</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="modalCorpo">
+                <!-- Conteúdo gerado via JS -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

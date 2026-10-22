@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12 text-center my-4">
+        <h1 class="display-4 fw-bold">Importância das Bases Numéricas</h1>
+        <p class="lead">Entenda a aplicação dos sistemas Decimal, Binário, Hexadecimal e Octal na computação e redes.</p>
+    </div>
+</div>
+
+<div class="row g-4">
+    <div class="col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm border-0">
+            <div class="card-header bg-primary text-white font-weight-bold">Base Decimal (Base 10)</div>
+            <div class="card-body">
+                <p class="card-text">É a base padrão utilizada pelos seres humanos no dia a dia. Composta pelos dígitos 0 a 9, facilita a interpretação direta de valores, cálculos financeiros e métricas de desempenho em sistemas de software.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm border-0">
+            <div class="card-header bg-success text-white font-weight-bold">Base Binária (Base 2)</div>
+            <div class="card-body">
+                <p class="card-text">A linguagem fundamental dos computadores e equipamentos de rede. Utiliza apenas 0s e 1s para representar estados elétricos (ligado/desligado). Essencial para roteamento IP, máscaras de rede e operações lógicas em nível de hardware.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm border-0">
+            <div class="card-header bg-warning text-dark font-weight-bold">Base Hexadecimal (Base 16)</div>
+            <div class="card-body">
+                <p class="card-text">Utiliza os dígitos 0-9 e as letras A-F. Fornece uma representação compacta de sequências binárias longas. Amplamente empregada na formatação de Endereços MAC, IPv6, códigos de cores HTML e dump de memória.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm border-0">
+            <div class="card-header bg-info text-white font-weight-bold">Base Octal (Base 8)</div>
+            <div class="card-body">
+                <p class="card-text">Composta pelos dígitos de 0 a 7. Cada dígito octal equivale exatamente a 3 bits binários. Historicamente utilizada na arquitetura de sistemas legados e na definição de permissões de arquivos em sistemas Unix/Linux (ex: chmod 755).</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
